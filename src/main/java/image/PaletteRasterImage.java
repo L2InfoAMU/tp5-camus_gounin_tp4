@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import static util.Matrices.*;
 
-public class PaletteRasterImage implements Image {
+public class PaletteRasterImage extends RasterImage {
 
     private List<Color> palette;
     private int[][] pixels;
@@ -45,7 +45,7 @@ public class PaletteRasterImage implements Image {
         return palette.get(pixels[x][y]);
     }
 
-    private void setPixelsColor (Color[][] pixels){
+    public void setPixelsColor (Color[][] pixels){
         for(int x = 0 ; x < getRowCount(pixels) ; x++)
             for(int y = 0 ; y < getColumnCount(pixels) ; y++)
                 setPixelColor(pixels[x][y] ,x ,y);

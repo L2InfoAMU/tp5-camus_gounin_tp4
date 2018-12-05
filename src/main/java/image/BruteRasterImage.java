@@ -3,7 +3,7 @@ import static util.Matrices.*;
 import javafx.scene.paint.Color;
 
 
-public class BruteRasterImage implements Image {
+public class BruteRasterImage extends RasterImage {
 
     private Color[][] colors;
     private int width;
@@ -12,7 +12,7 @@ public class BruteRasterImage implements Image {
     public BruteRasterImage(Color color, int width, int height){
         this.width = width;
         this.height = height;
-        colors = new Color[height][width];
+        createRepresentation();
         setPixelsColor(color);
     }
 
