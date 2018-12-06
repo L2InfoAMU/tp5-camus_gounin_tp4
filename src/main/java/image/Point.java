@@ -1,5 +1,4 @@
 package image;
-
 import java.util.Objects;
 
 /**
